@@ -1,0 +1,23 @@
+
+
+
+    <table data-vertable="ver1" id="mytable">
+      <thead style="background-color: brown;">
+        <tr class="row100 head">
+          <th class="column100 column1" data-column="column1">name</th>
+          <th class="column100 column2" data-column="column2">price</th>
+          <th class="column100 column3" data-column="column3">date</th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let item of items"> 
+        <tr class="row100" *ngFor="let data of item.data">
+        
+          <td class="column100 column1" data-column="column1">{{data.name}}</td>
+          <td class="column100 column2" data-column="column2">{{data.price}}</td>
+          <td class="column100 column3" data-column="column3">{{data.time}}</td>
+        
+        </tr>
+      </tbody>
+    </table>
+
+    <button type="button" class="btn btn-info" (click)="Export()" >Export</button>
